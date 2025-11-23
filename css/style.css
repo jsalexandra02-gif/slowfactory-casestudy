@@ -1,0 +1,431 @@
+/* =========================================
+   🌿 VARIABLES
+   ========================================= */
+
+:root {
+  /* Colors */
+  --sf-bg: #f4ece4;
+  --sf-ink: #111111;
+  --sf-border-soft: #e0d6cc;
+  --sf-accent: #ef4623;
+
+  /* Typography */
+  --sf-font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --sf-font-size-base: 16px;
+
+  /* Radius */
+  --sf-radius-sm: 4px;
+  --sf-radius-pill: 999px;
+
+  /* Spacing scale */
+  --sf-space-1: 0.5rem;
+  --sf-space-2: 1rem;
+  --sf-space-3: 1.5rem;
+  --sf-space-4: 2rem;
+
+  /* Layout */
+  --sf-container: 1200px;
+}
+
+/* =========================================
+   🌼 COMPONENT LIBRARY PAGE LAYOUT
+   ========================================= */
+
+.sf-page {
+  background-color: var(--sf-bg);
+  color: var(--sf-ink);
+  padding: 4rem 2rem;
+}
+
+.sf-page__header {
+  max-width: var(--sf-container);
+  margin: 0 auto 4rem auto;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--sf-border-soft);
+}
+
+.sf-page__title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sf-page__subtitle {
+  margin-top: 0.75rem;
+  font-size: 1.1rem;
+  color: var(--sf-ink);
+}
+
+.sf-page__main {
+  max-width: var(--sf-container);
+  margin: 0 auto;
+}
+
+/* Section styling */
+.sf-section {
+  padding: 3rem 0;
+  border-bottom: 2px solid var(--sf-border-soft);
+}
+
+.sf-section__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 2rem;
+}
+
+/* =========================================
+   🧼 RESET + BASE
+   ========================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sf-font-sans);
+  background-color: var(--sf-bg);
+  color: var(--sf-ink);
+  line-height: 1.5;
+  font-size: var(--sf-font-size-base);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================================
+   🏡 PAGE LAYOUT 
+   ========================================= */
+
+.sf-page {
+  padding: 2.5rem 3rem;
+}
+
+.sf-page__header {
+  max-width: var(--sf-container);
+  margin: 0 auto var(--sf-space-2) auto;
+}
+
+.sf-page__title {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+
+.sf-page__subtitle {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.sf-page__main {
+  max-width: var(--sf-container);
+  margin: 0 auto;
+}
+
+/* Shared section styling */
+
+.sf-section {
+  padding: var(--sf-space-3) 0;
+  border-top: 1px solid var(--sf-border-soft);
+}
+
+.sf-section__title {
+  font-size: 1.4rem;
+  margin: 0 0 1rem;
+}
+
+/* =========================================
+   🌱 ATOMS – COLOR
+   ========================================= */
+
+.sf-swatch-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.sf-swatch {
+  width: 130px;
+}
+
+.sf-swatch__color {
+  width: 100%;
+  height: 70px;
+  border-radius: var(--sf-radius-sm);
+  border: 1px solid var(--sf-border-soft);
+  margin-bottom: 0.5rem;
+}
+
+.sf-swatch__color--bg {
+  background-color: var(--sf-bg);
+}
+
+.sf-swatch__color--ink {
+  background-color: var(--sf-ink);
+}
+
+.sf-swatch__color--accent {
+  background-color: var(--sf-accent);
+}
+
+.sf-swatch__label {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* =========================================
+   🌱 ATOMS – TYPOGRAPHY
+   ========================================= */
+
+.sf-type-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.sf-type-demo {
+  background-color: #f7efe7;
+  padding: 1rem;
+  border-radius: var(--sf-radius-sm);
+}
+
+.sf-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.5rem;
+}
+
+.sf-hero {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sf-program-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.sf-program-subtitle {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.sf-body {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.sf-link {
+  font-size: 1rem;
+  color: var(--sf-ink);
+  text-decoration: underline;
+}
+
+/* =========================================
+   🌱 ATOMS – BUTTONS
+   ========================================= */
+
+.sf-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.sf-btn {
+  font-size: 0.9rem;
+  padding: 0.6rem 1.3rem;
+  border-radius: var(--sf-radius-pill);
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: var(--sf-ink);
+  color: #ffffff;
+}
+
+.sf-btn--secondary {
+  background-color: var(--sf-accent);
+}
+
+.sf-btn--outline {
+  background-color: transparent;
+  color: var(--sf-ink);
+  border-color: var(--sf-ink);
+}
+
+/* Simple interaction states */
+
+.sf-btn:hover {
+  opacity: 0.9;
+}
+
+.sf-btn:focus-visible {
+  outline: 2px solid var(--sf-accent);
+  outline-offset: 2px;
+}
+
+/* =========================================
+   🌱 ATOMS – FORM INPUT
+   ========================================= */
+
+.sf-newsletter__input {
+  flex: 1;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--sf-radius-pill);
+  border: 1px solid var(--sf-ink);
+  font-size: 0.95rem;
+}
+
+/* =========================================
+   🌿 MOLECULE – PROGRAM CARD
+   ========================================= */
+
+.sf-program-card {
+  background-color: var(--sf-bg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sf-program-card__header {
+  margin-bottom: 1rem;
+}
+
+.sf-program-card__program-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.sf-program-card__program-subtitle {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+}
+
+.sf-program-card__divider {
+  height: 2px;
+  width: 100%;
+  background-color: var(--sf-ink);
+  display: block;
+}
+
+.sf-program-card__media {
+  margin: 1rem 0;
+}
+
+.sf-program-card__media img {
+  border: 1px solid var(--sf-border-soft);
+}
+
+.sf-program-card__body {
+  margin-top: 0.5rem;
+}
+
+.sf-program-card__project-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem;
+}
+
+.sf-program-card__description {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* =========================================
+   🌿 MOLECULE – NEWSLETTER FORM
+   ========================================= */
+
+.sf-newsletter {
+  max-width: 480px;
+}
+
+.sf-newsletter__label {
+  font-size: 1rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.sf-newsletter__row {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.sf-newsletter__help {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* =========================================
+   🌼 ORGANISM – HEADER
+   ========================================= */
+
+.sf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--sf-bg);
+  border: 1px solid var(--sf-border-soft);
+  border-radius: var(--sf-radius-pill);
+}
+
+.sf-header__logo {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.sf-header__nav {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.sf-header__link {
+  text-decoration: none;
+  color: var(--sf-ink);
+}
+
+.sf-header__link--pill {
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--sf-radius-pill);
+  border: 1px solid var(--sf-ink);
+}
+
+/* =========================================
+   🌼 ORGANISM – PROGRAM GRID
+   ========================================= */
+
+.sf-program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* =========================================
+   📱 RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+  .sf-page {
+    padding: 1.5rem;
+  }
+
+  .sf-header {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .sf-header__nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

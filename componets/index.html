@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Slow Factory Web Component Library</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="sf-page">
+
+  <!-- Page header for the library itself -->
+  <header class="sf-page__header">
+    <h1 class="sf-page__title">Slow Factory Web Component Library</h1>
+    <p class="sf-page__subtitle">
+      Atoms, molecules, and organisms inspired by slowfactory.earth
+    </p>
+  </header>
+
+  <main class="sf-page__main">
+
+    <!-- ============= ATOMS ============= -->
+
+    <!-- Colors -->
+    <section class="sf-section">
+      <h2 class="sf-section__title">Atoms – Color</h2>
+
+      <div class="sf-swatch-row">
+        <div class="sf-swatch">
+          <div class="sf-swatch__color sf-swatch__color--bg"></div>
+          <p class="sf-swatch__label">Background<br>#F4ECE4</p>
+        </div>
+
+        <div class="sf-swatch">
+          <div class="sf-swatch__color sf-swatch__color--ink"></div>
+          <p class="sf-swatch__label">Ink<br>#111111</p>
+        </div>
+
+        <div class="sf-swatch">
+          <div class="sf-swatch__color sf-swatch__color--accent"></div>
+          <p class="sf-swatch__label">Accent<br>#EF4623</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Type samples -->
+    <section class="sf-section">
+      <h2 class="sf-section__title">Atoms – Typography</h2>
+
+      <div class="sf-type-grid">
+        <div class="sf-type-demo">
+          <p class="sf-label">Hero heading</p>
+          <p class="sf-hero">
+            Radical imagination for collective liberation
+          </p>
+        </div>
+
+        <div class="sf-type-demo">
+          <p class="sf-label">Program title + subtitle</p>
+          <h2 class="sf-program-title">
+            Independent Publishing and Living Archive
+          </h2>
+          <p class="sf-program-subtitle">
+            Media Justice and Narrative Change
+          </p>
+        </div>
+
+        <div class="sf-type-demo">
+          <p class="sf-label">Body text</p>
+          <p class="sf-body">
+            Independent media platform for climate, culture, design, art,
+            and resistance from the Global South.
+          </p>
+        </div>
+
+        <div class="sf-type-demo">
+          <p class="sf-label">Link</p>
+          <a href="#" class="sf-link">Read more about this program</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buttons -->
+    <section class="sf-section">
+      <h2 class="sf-section__title">Atoms – Buttons</h2>
+
+      <div class="sf-button-row">
+        <button class="sf-btn sf-btn--primary">Primary button</button>
+        <button class="sf-btn sf-btn--secondary">Secondary button</button>
+        <button class="sf-btn sf-btn--outline">Outline button</button>
+      </div>
+    </section>
+
+    <!-- ============= MOLECULES ============= -->
+
+    <!-- Program card -->
+    <section class="sf-section">
+      <h2 class="sf-section__title">Molecule – Program card</h2>
+
+      <article class="sf-program-card">
+        <header class="sf-program-card__header">
+          <h3 class="sf-program-card__program-title">
+            Independent Publishing and Living Archive
+          </h3>
+          <p class="sf-program-card__program-subtitle">
+            Media Justice and Narrative Change
+          </p>
+          <span class="sf-program-card__divider"></span>
+        </header>
+
+        <figure class="sf-program-card__media">
+          <!-- You can swap this link for your own image file if you like -->
+          <img
+            src="https://slowfactory.earth/assets/images/homepage/EIP-Issue-2-cover-sm2.jpg"
+            alt="Everything is Political cover"
+          />
+        </figure>
+
+        <div class="sf-program-card__body">
+          <h4 class="sf-program-card__project-title">
+            Everything is Political
+          </h4>
+          <p class="sf-program-card__description">
+            Independent media platform for climate, culture, design, art,
+            and resistance from the Global South.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Newsletter form -->
+    <section class="sf-section">
+      <h2 class="sf-section__title">Molecule – Newsletter form</h2>
+
+      <form class="sf-newsletter">
+        <label class="sf-newsletter__label" for="email">
+          Sign up for our newsletter
+        </label>
+        <div class="sf-newsletter__row">
+          <input
+            type="email"
+            id="email"
+            class="sf-newsletter__input"
+            placeholder="name@example.com"
+          />
+          <button class="sf-btn sf-btn--primary" type="submit">
+            Subscribe
+          </button>
+        </div>
+        <p class="sf-newsletter__help">
+          By subscribing you agree to receive updates from Slow Factory.
+        </p>
+      </form>
+    </section>
+
+    <!-- ============= ORGANISMS ============= -->
+
+    <!-- Simple header organism -->
+    <section class="sf-section">
+      <h2 class="sf-section__title">Organism – Site header</h2>
+
+      <header class="sf-header">
+        <div class="sf-header__logo">Slow Factory</div>
+        <nav class="sf-header__nav">
+          <a href="#" class="sf-header__link">Programs</a>
+          <a href="#" class="sf-header__link">Shop</a>
+          <a href="#" class="sf-header__link">About</a>
+          <a href="#" class="sf-header__link sf-header__link--pill">
+            Donate
+          </a>
+        </nav>
+      </header>
+    </section>
+
+    <!-- Program grid organism -->
+    <section class="sf-section">
+      <h2 class="sf-section__title">Organism – Program grid</h2>
+
+      <div class="sf-program-grid">
+        <!-- Card 1 -->
+        <article class="sf-program-card">
+          <header class="sf-program-card__header">
+            <h3 class="sf-program-card__program-title">
+              Independent Publishing and Living Archive
+            </h3>
+            <p class="sf-program-card__program-subtitle">
+              Media Justice and Narrative Change
+            </p>
+            <span class="sf-program-card__divider"></span>
+          </header>
+          <figure class="sf-program-card__media">
+            <img
+              src="https://slowfactory.earth/assets/images/homepage/EIP-Issue-2-cover-sm2.jpg"
+              alt="Everything is Political cover"
+            />
+          </figure>
+          <div class="sf-program-card__body">
+            <h4 class="sf-program-card__project-title">
+              Everything is Political
+            </h4>
+            <p class="sf-program-card__description">
+              Independent media platform for climate, culture, design, art,
+              and resistance from the Global South.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="sf-program-card">
+          <header class="sf-program-card__header">
+            <h3 class="sf-program-card__program-title">
+              Participatory Art and Design
+            </h3>
+            <p class="sf-program-card__program-subtitle">
+              Culture, Arts and Open Knowledge
+            </p>
+            <span class="sf-program-card__divider"></span>
+          </header>
+          <figure class="sf-program-card__media">
+            <img
+              src="https://slowfactory.earth/assets/images/open-education/asset_1.png"
+              alt="Open Edu illustration"
+            />
+          </figure>
+          <div class="sf-program-card__body">
+            <h4 class="sf-program-card__project-title">
+              Open Edu
+            </h4>
+            <p class="sf-program-card__description">
+              Free and accessible education program by and for the Global Majority.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="sf-program-card">
+          <header class="sf-program-card__header">
+            <h3 class="sf-program-card__program-title">
+              Movement Organizing and Campaigning
+            </h3>
+            <p class="sf-program-card__program-subtitle">
+              Sustainable Systemic Change
+            </p>
+            <span class="sf-program-card__divider"></span>
+          </header>
+          <figure class="sf-program-card__media">
+            <img
+              src="https://slowfactory.earth/uploads/2024_6_17_Military_Climate_1.png"
+              alt="Media Justice truck"
+            />
+          </figure>
+          <div class="sf-program-card__body">
+            <h4 class="sf-program-card__project-title">
+              Media Justice
+            </h4>
+            <p class="sf-program-card__description">
+              Billboards and large scale media to empower global movements.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
