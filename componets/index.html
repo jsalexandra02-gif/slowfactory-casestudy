@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <title>Slow Factory Web Component Library</title>
+
+  <!-- Correct relative path (from /components to /css) -->
   <link rel="stylesheet" href="../css/style.css" />
 </head>
+
 <body class="sf-page">
 
   <!-- Page header for the library itself -->
@@ -22,7 +25,6 @@
     <!-- Colors -->
     <section class="sf-section">
       <h2 class="sf-section__title">Atoms – Color</h2>
-
       <div class="sf-swatch-row">
         <div class="sf-swatch">
           <div class="sf-swatch__color sf-swatch__color--bg"></div>
@@ -41,26 +43,19 @@
       </div>
     </section>
 
-    <!-- Type samples -->
+    <!-- Typography -->
     <section class="sf-section">
       <h2 class="sf-section__title">Atoms – Typography</h2>
-
       <div class="sf-type-grid">
         <div class="sf-type-demo">
           <p class="sf-label">Hero heading</p>
-          <p class="sf-hero">
-            Radical imagination for collective liberation
-          </p>
+          <p class="sf-hero">Radical imagination for collective liberation</p>
         </div>
 
         <div class="sf-type-demo">
           <p class="sf-label">Program title + subtitle</p>
-          <h2 class="sf-program-title">
-            Independent Publishing and Living Archive
-          </h2>
-          <p class="sf-program-subtitle">
-            Media Justice and Narrative Change
-          </p>
+          <h2 class="sf-program-title">Independent Publishing and Living Archive</h2>
+          <p class="sf-program-subtitle">Media Justice and Narrative Change</p>
         </div>
 
         <div class="sf-type-demo">
@@ -81,7 +76,6 @@
     <!-- Buttons -->
     <section class="sf-section">
       <h2 class="sf-section__title">Atoms – Buttons</h2>
-
       <div class="sf-button-row">
         <button class="sf-btn sf-btn--primary">Primary button</button>
         <button class="sf-btn sf-btn--secondary">Secondary button</button>
@@ -89,35 +83,32 @@
       </div>
     </section>
 
+    <!-- NEW: Outline CTA Button -->
+    <section class="sf-section">
+      <h2 class="sf-section__title">Atom – Outline CTA Button</h2>
+      <button class="sf-btn sf-btn--outline-square">
+        <span class="sf-btn__label">All Programs</span>
+        <span class="sf-btn__arrow">→</span>
+      </button>
+    </section>
+
     <!-- ============= MOLECULES ============= -->
 
     <!-- Program card -->
     <section class="sf-section">
       <h2 class="sf-section__title">Molecule – Program card</h2>
-
       <article class="sf-program-card">
         <header class="sf-program-card__header">
-          <h3 class="sf-program-card__program-title">
-            Independent Publishing and Living Archive
-          </h3>
-          <p class="sf-program-card__program-subtitle">
-            Media Justice and Narrative Change
-          </p>
+          <h3 class="sf-program-card__program-title">Independent Publishing and Living Archive</h3>
+          <p class="sf-program-card__program-subtitle">Media Justice and Narrative Change</p>
           <span class="sf-program-card__divider"></span>
         </header>
-
         <figure class="sf-program-card__media">
-          <!-- You can swap this link for your own image file if you like -->
-          <img
-            src="https://slowfactory.earth/assets/images/homepage/EIP-Issue-2-cover-sm2.jpg"
-            alt="Everything is Political cover"
-          />
+          <img src="https://slowfactory.earth/assets/images/homepage/EIP-Issue-2-cover-sm2.jpg"
+               alt="Everything is Political cover" />
         </figure>
-
         <div class="sf-program-card__body">
-          <h4 class="sf-program-card__project-title">
-            Everything is Political
-          </h4>
+          <h4 class="sf-program-card__project-title">Everything is Political</h4>
           <p class="sf-program-card__description">
             Independent media platform for climate, culture, design, art,
             and resistance from the Global South.
@@ -129,136 +120,203 @@
     <!-- Newsletter form -->
     <section class="sf-section">
       <h2 class="sf-section__title">Molecule – Newsletter form</h2>
-
       <form class="sf-newsletter">
-        <label class="sf-newsletter__label" for="email">
-          Sign up for our newsletter
-        </label>
+        <label class="sf-newsletter__label" for="email">Sign up for our newsletter</label>
         <div class="sf-newsletter__row">
-          <input
-            type="email"
-            id="email"
-            class="sf-newsletter__input"
-            placeholder="name@example.com"
-          />
-          <button class="sf-btn sf-btn--primary" type="submit">
-            Subscribe
-          </button>
+          <input type="email" id="email" class="sf-newsletter__input" placeholder="name@example.com" />
+          <button class="sf-btn sf-btn--primary" type="submit">Subscribe</button>
         </div>
-        <p class="sf-newsletter__help">
-          By subscribing you agree to receive updates from Slow Factory.
-        </p>
       </form>
     </section>
 
     <!-- ============= ORGANISMS ============= -->
 
-    <!-- Simple header organism -->
+    <!-- Site header -->
     <section class="sf-section">
       <h2 class="sf-section__title">Organism – Site header</h2>
-
       <header class="sf-header">
         <div class="sf-header__logo">Slow Factory</div>
         <nav class="sf-header__nav">
           <a href="#" class="sf-header__link">Programs</a>
           <a href="#" class="sf-header__link">Shop</a>
           <a href="#" class="sf-header__link">About</a>
-          <a href="#" class="sf-header__link sf-header__link--pill">
-            Donate
-          </a>
+          <a href="#" class="sf-header__link sf-header__link--pill">Donate</a>
         </nav>
       </header>
     </section>
 
-    <!-- Program grid organism -->
+    <!-- Program grid -->
     <section class="sf-section">
       <h2 class="sf-section__title">Organism – Program grid</h2>
-
       <div class="sf-program-grid">
+
         <!-- Card 1 -->
         <article class="sf-program-card">
           <header class="sf-program-card__header">
-            <h3 class="sf-program-card__program-title">
-              Independent Publishing and Living Archive
-            </h3>
-            <p class="sf-program-card__program-subtitle">
-              Media Justice and Narrative Change
-            </p>
+            <h3 class="sf-program-card__program-title">Independent Publishing and Living Archive</h3>
+            <p class="sf-program-card__program-subtitle">Media Justice and Narrative Change</p>
             <span class="sf-program-card__divider"></span>
           </header>
           <figure class="sf-program-card__media">
-            <img
-              src="https://slowfactory.earth/assets/images/homepage/EIP-Issue-2-cover-sm2.jpg"
-              alt="Everything is Political cover"
-            />
+            <img src="https://slowfactory.earth/assets/images/homepage/EIP-Issue-2-cover-sm2.jpg" alt="" />
           </figure>
           <div class="sf-program-card__body">
-            <h4 class="sf-program-card__project-title">
-              Everything is Political
-            </h4>
-            <p class="sf-program-card__description">
-              Independent media platform for climate, culture, design, art,
-              and resistance from the Global South.
-            </p>
+            <h4 class="sf-program-card__project-title">Everything is Political</h4>
+            <p class="sf-program-card__description">Independent media platform for climate, culture, design, art,
+              and resistance from the Global South.</p>
           </div>
         </article>
 
         <!-- Card 2 -->
         <article class="sf-program-card">
           <header class="sf-program-card__header">
-            <h3 class="sf-program-card__program-title">
-              Participatory Art and Design
-            </h3>
-            <p class="sf-program-card__program-subtitle">
-              Culture, Arts and Open Knowledge
-            </p>
+            <h3 class="sf-program-card__program-title">Participatory Art and Design</h3>
+            <p class="sf-program-card__program-subtitle">Culture, Arts and Open Knowledge</p>
             <span class="sf-program-card__divider"></span>
           </header>
           <figure class="sf-program-card__media">
-            <img
-              src="https://slowfactory.earth/assets/images/open-education/asset_1.png"
-              alt="Open Edu illustration"
-            />
+            <img src="https://slowfactory.earth/assets/images/open-education/asset_1.png" alt="" />
           </figure>
           <div class="sf-program-card__body">
-            <h4 class="sf-program-card__project-title">
-              Open Edu
-            </h4>
-            <p class="sf-program-card__description">
-              Free and accessible education program by and for the Global Majority.
-            </p>
+            <h4 class="sf-program-card__project-title">Open Edu</h4>
+            <p class="sf-program-card__description">Free and accessible education program by and for the Global Majority.</p>
           </div>
         </article>
 
         <!-- Card 3 -->
         <article class="sf-program-card">
           <header class="sf-program-card__header">
-            <h3 class="sf-program-card__program-title">
-              Movement Organizing and Campaigning
-            </h3>
-            <p class="sf-program-card__program-subtitle">
-              Sustainable Systemic Change
-            </p>
+            <h3 class="sf-program-card__program-title">Movement Organizing and Campaigning</h3>
+            <p class="sf-program-card__program-subtitle">Sustainable Systemic Change</p>
             <span class="sf-program-card__divider"></span>
           </header>
           <figure class="sf-program-card__media">
-            <img
-              src="https://slowfactory.earth/uploads/2024_6_17_Military_Climate_1.png"
-              alt="Media Justice truck"
-            />
+            <img src="https://slowfactory.earth/uploads/2024_6_17_Military_Climate_1.png" alt="" />
           </figure>
           <div class="sf-program-card__body">
-            <h4 class="sf-program-card__project-title">
-              Media Justice
-            </h4>
-            <p class="sf-program-card__description">
-              Billboards and large scale media to empower global movements.
-            </p>
+            <h4 class="sf-program-card__project-title">Media Justice</h4>
+            <p class="sf-program-card__description">Billboards and large scale media to empower global movements.</p>
           </div>
         </article>
+
       </div>
     </section>
 
+    <!-- NEW: Membership banner -->
+    <section class="sf-section">
+      <h2 class="sf-section__title">Organism – Membership & Newsletter</h2>
+      <section class="sf-member-banner">
+
+        <div class="sf-member-banner__headline">
+          Become a Slow Factory member today
+        </div>
+
+        <div class="sf-member-banner__body">
+          <!-- Social -->
+          <div class="sf-member-banner__column">
+            <h3 class="sf-member-banner__subheading">Connect With Us</h3>
+            <div class="sf-social-icons">
+              <a href="#" class="sf-social-icon"></a>
+              <a href="#" class="sf-social-icon"></a>
+              <a href="#" class="sf-social-icon"></a>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="sf-member-banner__divider"></div>
+
+          <!-- Newsletter Form -->
+          <div class="sf-member-banner__column">
+            <h3 class="sf-member-banner__subheading">Sign up for our newsletter</h3>
+            <form class="sf-member-form">
+              <div class="sf-member-form__row">
+                <input type="email" class="sf-member-form__input" placeholder="enter your email" />
+                <button class="sf-member-form__button" type="submit">STAY INFORMED</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- ============= ORGANISMS – MAIN NAV ============= -->
+
+    <section class="sf-section">
+      <h2 class="sf-section__title">Organism – Main navigation bar</h2>
+
+      <nav class="sf-main-nav">
+        <div class="sf-main-nav__logo">Slow Factory</div>
+
+        <div class="sf-main-nav__menu">
+          <div class="sf-main-nav__group">
+            <a href="#" class="sf-main-nav__link">Upcoming</a>
+            <a href="#" class="sf-main-nav__link">Media</a>
+            <a href="#" class="sf-main-nav__link">Arts &amp; Education</a>
+            <a href="#" class="sf-main-nav__link">Systems</a>
+            <a href="#" class="sf-main-nav__link">About</a>
+          </div>
+
+          <div class="sf-main-nav__group sf-main-nav__group--cta">
+            <a href="#" class="sf-main-nav__link sf-main-nav__link--shop">
+              Shop
+            </a>
+            <a href="#" class="sf-main-nav__link sf-main-nav__link--donate">
+              Donate
+            </a>
+            <a href="#" class="sf-main-nav__link sf-main-nav__link--login">
+              Login
+            </a>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- ============= ORGANISMS – MEMBER / NEWSLETTER ============= -->
+
+    <section class="sf-section">
+      <h2 class="sf-section__title">Organism – Member banner &amp; newsletter</h2>
+
+      <section class="sf-member-banner">
+        <div class="sf-member-banner__headline">
+          Become a Slow Factory member today
+        </div>
+
+        <div class="sf-member-banner__body">
+          <!-- Left column: Connect with us -->
+          <div class="sf-member-banner__column">
+            <h3 class="sf-member-banner__subheading">Connect With Us</h3>
+
+            <div class="sf-social-icons">
+              <span class="sf-social-icon" aria-hidden="true"></span>
+              <span class="sf-social-icon" aria-hidden="true"></span>
+              <span class="sf-social-icon" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="sf-member-banner__divider" aria-hidden="true"></div>
+
+          <!-- Right column: newsletter form -->
+          <div class="sf-member-banner__column">
+            <h3 class="sf-member-banner__subheading">
+              Sign up for our newsletter
+            </h3>
+
+            <form class="sf-member-form">
+              <div class="sf-member-form__row">
+                <input
+                  type="email"
+                  class="sf-member-form__input"
+                  placeholder="enter your email"
+                />
+                <button class="sf-member-form__button" type="submit">
+                  Stay informed
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </section>
   </main>
 </body>
 </html>
