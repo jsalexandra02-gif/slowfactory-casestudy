@@ -101,6 +101,8 @@ img {
    🏡 PAGE LAYOUT 
    ========================================= */
 
+/* (These override some of the above because they come later) */
+
 .sf-page {
   padding: 2.5rem 3rem;
 }
@@ -241,7 +243,7 @@ img {
 .sf-btn {
   font-size: 0.9rem;
   padding: 0.6rem 1.3rem;
-  border-radius: var(--sf-radius-pill);
+  border-radius: 0;
   border: 1px solid transparent;
   cursor: pointer;
   background-color: var(--sf-ink);
@@ -269,6 +271,27 @@ img {
   outline-offset: 2px;
 }
 
+/* Outline square CTA button like "ALL PROGRAMS →" */
+
+.sf-btn--outline-square {
+  background-color: transparent;
+  color: var(--sf-ink);
+  border-color: var(--sf-ink);
+  border-radius: 0;
+  padding: 0.85rem 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sf-btn__arrow {
+  font-size: 1rem;
+}
+
 /* =========================================
    🌱 ATOMS – FORM INPUT
    ========================================= */
@@ -276,9 +299,47 @@ img {
 .sf-newsletter__input {
   flex: 1;
   padding: 0.6rem 0.75rem;
-  border-radius: var(--sf-radius-pill);
+  border-radius: var(--sf-radius-sm); /* updated from pill to square */
   border: 1px solid var(--sf-ink);
   font-size: 0.95rem;
+}
+
+/* Membership footer form – input + button */
+
+.sf-member-form__row {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 540px;
+}
+
+.sf-member-form__input {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--sf-ink);
+}
+
+.sf-member-form__input::placeholder {
+  color: #bbbbbb;
+}
+
+.sf-member-form__button {
+  background-color: var(--sf-ink);
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+.sf-member-form__button:hover {
+  opacity: 0.9;
 }
 
 /* =========================================
@@ -409,6 +470,138 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
+/* =========================================
+   🌼 ORGANISM – MAIN NAV BAR
+   ========================================= */
+
+.sf-main-nav {
+  background-color: #f5f2ee;
+  padding: 0.6rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.125rem; /* ~18px */
+}
+
+.sf-main-nav__logo {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.sf-main-nav__menu {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.sf-main-nav__group {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.sf-main-nav__group--cta {
+  gap: 1rem;
+}
+
+.sf-main-nav__link {
+  text-decoration: none;
+  color: var(--sf-ink);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* CTA-style links on the right: SHOP / DONATE / LOGIN */
+.sf-main-nav__link--shop,
+.sf-main-nav__link--donate,
+.sf-main-nav__link--login {
+  padding: 0.35rem 1.2rem;
+  border-radius: 0; /* squared */
+  border: 2px solid var(--sf-ink);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+}
+
+/* Slight tints to echo Slow Factory */
+.sf-main-nav__link--shop {
+  background-color: transparent;
+}
+
+.sf-main-nav__link--donate {
+  background-color: rgba(239, 70, 35, 0.1);
+}
+
+.sf-main-nav__link--login {
+  background-color: rgba(104, 153, 230, 0.2);
+}
+
+.sf-main-nav__link:hover {
+  opacity: 0.9;
+}
+
+/* =========================================
+   🌼 ORGANISM – MEMBERSHIP + NEWSLETTER
+   ========================================= */
+
+.sf-member-banner {
+  background-color: var(--sf-accent);
+  color: #ffffff;
+  margin-top: var(--sf-space-4);
+}
+
+/* top red headline bar */
+.sf-member-banner__headline {
+  max-width: var(--sf-container);
+  margin: 0 auto;
+  padding: 1.7rem 2rem;
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* beige area with social + form */
+.sf-member-banner__body {
+  max-width: var(--sf-container);
+  margin: 0 auto;
+  background-color: var(--sf-bg);
+  color: var(--sf-ink);
+  padding: 3rem 2rem;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.sf-member-banner__column {
+  flex: 1;
+}
+
+.sf-member-banner__subheading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+/* vertical divider */
+.sf-member-banner__divider {
+  width: 1px;
+  background-color: var(--sf-ink);
+  align-self: stretch;
+}
+
+/* social icons */
+.sf-social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.sf-social-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  border: 2px solid var(--sf-ink);
+  display: inline-block;
+}
 
 /* =========================================
    📱 RESPONSIVE
@@ -427,5 +620,23 @@ img {
   .sf-header__nav {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .sf-member-banner__body {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .sf-member-banner__divider {
+    display: none;
+  }
+
+  .sf-member-form__row {
+    flex-direction: column;
+  }
+
+  .sf-member-form__button {
+    width: 100%;
+    text-align: center;
   }
 }
